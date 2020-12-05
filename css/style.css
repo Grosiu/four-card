@@ -76,7 +76,8 @@ body {
   margin-bottom: 30px;
   -webkit-box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
-  max-width: 385px;
+  max-width: 450px;
+  width: 100%;
 }
 
 .offer-item--supervisior {
