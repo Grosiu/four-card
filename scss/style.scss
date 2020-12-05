@@ -1,0 +1,114 @@
+/*
+    ### Mixins ###
+*/
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+    ### Variables ###
+*/
+
+$bgcolor: whitesmoke;
+$itembgcolor: hsl(0, 0%, 98%);
+$font: 'Poppins', sans-serif;
+$font-color: hsl(234, 12%, 34%);
+$desc-color: hsl(229, 6%, 66%);
+
+/*
+    ### Globals ###
+*/
+*, *::before, *::after{
+    @include reset();
+}
+
+html {
+    height: 100%;
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+body {
+    @include reset();
+    height: 100%;
+    background: $bgcolor;
+    color: $font-color; 
+}
+
+/*
+    ### CARD ###
+*/
+
+.card {
+    padding: 20px;
+}
+
+.introduce{
+    text-align: center;
+
+    &__title{
+
+        &--lighter{
+            font-weight: 200;
+        }
+    }
+    &__desc {
+        font-weight: 400;
+        color: $desc-color;
+        max-width: 450px;
+        margin: 0 auto 60px auto;
+    }
+}
+
+.offers {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.offer-item {
+    flex: 1;
+    background: $itembgcolor;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, .1);
+    max-width: 385px;
+
+    &--supervisior {
+        border-top: solid 4px hsl(180, 62%, 55%);
+    }
+
+    &--team-builder {
+        border-top: solid 4px hsl(0, 78%, 62%);
+    }
+
+    &--karma {
+        border-top: solid 4px hsl(34, 97%, 64%);
+    }
+
+    &--calculator {
+        border-top: solid 4px hsl(212, 86%, 64%);
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__desc {
+        margin: 0;
+        font-weight: 400;
+        color: $desc-color;
+    }
+
+    &__img {
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+        padding-top: 20px;
+    }
+}
+
